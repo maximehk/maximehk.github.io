@@ -1,6 +1,29 @@
 # Raspberry Pi setup
 
-## Flashing the SD card
+## Flashing the SD card and SSD drive + boot from SSD
+
+Source: [video by Andreas Spiess](https://www.youtube.com/watch?v=gp6XW-fGVjo) and [J. Chambers Blog Post](https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/)
+
+1. Download the latest OS from [raspberrypi.org](https://www.raspberrypi.org/downloads/raspbian/)
+1. Flash the SD Card and SSD disk with [Balena Etcher](https://www.balena.io/etcher/)
+1. Remove the SSD disk and make sure the boot partition from the SD Card is mounted
+1. Assuming you're running MacOS type the commands below to allow remote access over wifi
+1. Remove the SD card from your computer and re-insert the SSD then run the command again
+1. At this stage, follow the instructions from the blog post
+```bash
+touch /Volumes/boot/ssh
+cat > /Volumes/boot/wpa_supplicant.conf << 'EOF'
+country=CH
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+     ssid="kiwi"
+     psk="PASSWORD HERE"
+     key_mgmt=WPA-PSK
+}
+EOF
+```
 
 ## Initial configuration
 
