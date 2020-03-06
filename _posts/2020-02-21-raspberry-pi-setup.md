@@ -1,5 +1,9 @@
 # Raspberry Pi setup
 
+## Hardware
+
+Raspberry Pi 4 + [Sandisk Extreme SSD](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-usb-3-1-ssd#SDSSDE60-1T00-G25)
+
 ## Flashing the SD card and SSD drive + boot from SSD
 
 Source: [video by Andreas Spiess](https://www.youtube.com/watch?v=gp6XW-fGVjo) and [J. Chambers Blog Post](https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/)
