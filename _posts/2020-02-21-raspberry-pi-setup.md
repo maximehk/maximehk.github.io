@@ -9,7 +9,8 @@ Source: [video by Andreas Spiess](https://www.youtube.com/watch?v=gp6XW-fGVjo) a
 1. Remove the SSD disk and make sure the boot partition from the SD Card is mounted
 1. Assuming you're running MacOS type the commands below to allow remote access over wifi
 1. Remove the SD card from your computer and re-insert the SSD then run the command again
-1. At this stage, follow the instructions from the blog post
+1. At this stage, follow the instructions from the [blog post](https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/).
+
 ```bash
 touch /Volumes/boot/ssh
 cat > /Volumes/boot/wpa_supplicant.conf << 'EOF'
@@ -51,7 +52,7 @@ touch authorized_keys
 chmod 644 authorized_keys
 
 # Append your public key to `authorized_keys`
-cat >> authorized_keys
+cat >> .ssh/authorized_keys
 ```
 
 ## Docker install
